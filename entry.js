@@ -54,11 +54,13 @@ d3.csv('data.csv', function (error, data) {
 		.call(d3.axisBottom(x));
 
 	svg.append("g")
+		.attr("class", "humidity")
 		.call(d3.axisLeft(y1)
 			.ticks(5)
 			.tickFormat(function (d) { return d + "%"; }));
 
 	svg.append("g")
+		.attr("class", "co2")
 		.attr("transform", "translate(" + width + ",0)")
 		.call(d3.axisRight(y2)
 			.ticks(5)
