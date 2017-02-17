@@ -13,27 +13,37 @@
         	opacity: 0.4;
         }
 
-        .line.humidity {
+        .line.line-1 {
         	stroke: #3a99fb;
         }
 
-        .line.co2 {
+        .line.line-2 {
         	stroke: #00f8b8;
         }
 
-        g.humidity path,
-        g.co2 path,
-        g.humidity line,
-        g.co2 line {
+        g.axis path,
+        g.axis line {
         	display: none;
         }
 
-        g.humidity text {
+        g.axis-1 text {
         	fill: #3a99fb;
         }
 
-        g.co2 text {
+        g.axis-2 text {
         	fill: #00f8b8;
+        }
+
+        .area {
+            stroke: transparent;
+        }
+
+        .area-1 {
+            fill: url(#data-1-gradient);
+        }
+
+        .area-2 {
+            fill: url(#data-2-gradient);
         }
 
         svg {
@@ -46,6 +56,10 @@
 
         svg path {
         	stroke: #fff;
+        }
+
+        svg path.domain {
+            stroke: transparent;
         }
         </style>
     </head>
